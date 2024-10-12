@@ -1,0 +1,51 @@
+{
+  "regle_validation" : [ {
+    "context" : "premier_demande_passeport_mineur",
+    "categories" : [ {
+      "categorie" : "etat_civil",
+      "champs" : [ {
+        "regle" : "nom != null && nom.length() >= 1 && nom.length() <= 76",
+        "champ" : "nom"
+      }, {
+        "regle" : "prenom != null && prenom.length() >= 1 && prenom.length() <= 76",
+        "champ" : "prenom"
+      } ]
+    }, {
+      "categorie" : "coordonee",
+      "champs" : [ {
+        "regle" : "rue != null && rue.length() >= 1 && rue.length() <= 76",
+        "champ" : "rue"
+      }, {
+        "regle" : "ville != null && ville.length() >= 1 && ville.length() <= 76",
+        "champ" : "ville"
+      }, {
+        "regle" : "pays!= null && pays.length() >= 1 && pays.length() <= 76",
+        "champ" : "pays"
+      } ]
+    } ]
+  }, {
+    "context" : "premier_demande_passeport_majeur",
+    "categories" : [ {
+      "categorie" : "etat_civil",
+      "champs" : [ {
+        "regle" : "nom != null && nom.length() >= 1 && nom.length() <= 76",
+        "champ" : "nom"
+      }, {
+        "regle" : "prenom != null && prenom.length() >= 1 && prenom.length() <= 76",
+        "champ" : "prenom"
+      } ]
+    }, {
+      "categorie" : "coordonee",
+      "champs" : [ {
+        "regle" : "rue != null && rue.length() >= 1 && rue.length() <= 76",
+        "champ" : "rue"
+      }, {
+        "regle" : "ville != null && ville.length() >= 1 && ville.length() <= 76",
+        "champ" : "ville"
+      }, {
+        "regle" : "pays!= null && pays.length() >= 1 && pays.length() <= 76",
+        "champ" : "pays"
+      } ]
+    } ]
+  } ]
+}
