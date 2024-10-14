@@ -1,15 +1,13 @@
-package org.donneesPersonnelles.donneePersonelle;
+package org.Donnees;
 
 import java.util.Date;
 
 public class EtatCivil {
-
-
-    private Status status;
-    private Sexe sexe;
+    private InformationPersonnelle.Status status;
+    private InformationPersonnelle.Sexe sexe;
     private String nom;
     private String nomUsage;
-    private Parent OriginNomUsage;
+    private InformationPersonnelle.Parent OrigineNomUsage;
     private String prenom;
     private String prenomUsuel;
     private Date dateNaissance;
@@ -17,68 +15,22 @@ public class EtatCivil {
     private int departementNaissance;
     private String paysNaissance;
     private Double taille;
-    private Yeux couleurYeux;
-
-    protected enum Sexe {
-        HOMME,
-        FEMME
-    }
-
-    protected enum Status{
-        MINEUR,
-        MAJEUR
-    }
-
-    protected enum Yeux{
-        BLEUE,
-        NOIRE,
-        MARRON,
-        VERT
-    }
-
-    protected enum Parent{
-        PERE,
-        MERE
-    }
+    private InformationPersonnelle.Yeux couleurYeux;
 
 
-    public String getNomUsage() {
-        return nomUsage;
-    }
-
-    public void setNomUsage(String nomUsage) {
-        this.nomUsage = nomUsage;
-    }
-
-    public Parent getOriginNomUsage() {
-        return OriginNomUsage;
-    }
-
-    public void setOriginNomUsage(Parent originNomUsage) {
-        OriginNomUsage = originNomUsage;
-    }
-
-    public String getPrenomUsuel() {
-        return prenomUsuel;
-    }
-
-    public void setPrenomUsuel(String prenomUsuel) {
-        this.prenomUsuel = prenomUsuel;
-    }
-
-    public Status getStatus() {
+    public InformationPersonnelle.Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(InformationPersonnelle.Status status) {
         this.status = status;
     }
 
-    public Sexe getSexe() {
+    public InformationPersonnelle.Sexe getSexe() {
         return sexe;
     }
 
-    public void setSexe(Sexe sexe) {
+    public void setSexe(InformationPersonnelle.Sexe sexe) {
         this.sexe = sexe;
     }
 
@@ -90,12 +42,36 @@ public class EtatCivil {
         this.nom = nom;
     }
 
+    public String getNomUsage() {
+        return nomUsage;
+    }
+
+    public void setNomUsage(String nomUsage) {
+        this.nomUsage = nomUsage;
+    }
+
+    public InformationPersonnelle.Parent getOrigineNomUsage() {
+        return OrigineNomUsage;
+    }
+
+    public void setOrigineNomUsage(InformationPersonnelle.Parent origineNomUsage) {
+        OrigineNomUsage = origineNomUsage;
+    }
+
     public String getPrenom() {
         return prenom;
     }
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
+    }
+
+    public String getPrenomUsuel() {
+        return prenomUsuel;
+    }
+
+    public void setPrenomUsuel(String prenomUsuel) {
+        this.prenomUsuel = prenomUsuel;
     }
 
     public Date getDateNaissance() {
@@ -138,11 +114,11 @@ public class EtatCivil {
         this.taille = taille;
     }
 
-    public Yeux getCouleurYeux() {
+    public InformationPersonnelle.Yeux getCouleurYeux() {
         return couleurYeux;
     }
 
-    public void setCouleurYeux(Yeux couleurYeux) {
+    public void setCouleurYeux(InformationPersonnelle.Yeux couleurYeux) {
         this.couleurYeux = couleurYeux;
     }
 }

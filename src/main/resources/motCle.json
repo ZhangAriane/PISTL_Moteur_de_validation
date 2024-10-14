@@ -1,0 +1,9 @@
+{
+  "taille": "length()",
+  "est présent" : "!=null",
+  "est supérieur ou égal à" : ">=",
+  "est supérieur à" : ">",
+  "est inférieur ou égal à" : "<=",
+  "est inférieur" : "<",
+  "et" : "&&"
+}

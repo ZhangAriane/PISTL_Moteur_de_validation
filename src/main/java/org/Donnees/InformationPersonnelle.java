@@ -1,4 +1,4 @@
-package org.donneesPersonnelles;
+package org.Donnees;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ public class InformationPersonnelle {
         FEMME
     }
 
-    protected enum Status {
+    public enum Status {
         MINEUR,
         MAJEUR
     }
@@ -22,7 +22,7 @@ public class InformationPersonnelle {
         VERT
     }
 
-    protected enum Parent {
+    public enum Parent {
         PERE,
         MERE
     }

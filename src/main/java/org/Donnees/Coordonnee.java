@@ -1,6 +1,7 @@
-package org.donneesPersonnelles.donneePersonelle;
+package org.Donnees;
 
 public class Coordonnee {
+
     private int numTelephone;
     private String rue;
     private String ville;
