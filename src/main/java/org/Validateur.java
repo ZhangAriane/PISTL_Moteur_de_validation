@@ -28,6 +28,11 @@ public class Validateur {
         return res;
     }
 
+    /**
+     * Vérifie si donneesPersonnelles respect les règles
+     * @param donneesPersonnelles
+     * @return
+     */
     public boolean valide(DonneesPersonnelles donneesPersonnelles){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
@@ -94,60 +99,96 @@ public class Validateur {
         return res;
     }
 
+    /**
+     * Vérifie si l'état civil respect les règles
+     * @param etatCivil
+     * @return
+     */
     private boolean valideEtatCivil(EtatCivil etatCivil){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("etat_civil")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,etatCivil);
             }
         }
         return res;
     }
 
+    /**
+     * Vérifie si les coordonnées respect les règles
+     * @param coordonnee
+     * @return
+     */
     private boolean valideCoordonnee(Coordonnee coordonnee){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("coordonnee")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,coordonnee);
             }
         }
         return res;
     }
 
+    /**
+     * Vérifie si la filiation respect les règles
+     * @param filiation
+     * @return
+     */
     private boolean valideFiliation(Filiation filiation){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("filiation")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,filiation);
             }
         }
         return res;
     }
 
+    /**
+     * Vérifie si la nationalité respect les règles
+     * @param nationalite
+     * @return
+     */
     private boolean valideNationalite(Nationalite nationalite){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("nationalite")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,nationalite);
             }
         }
         return res;
     }
 
+    /**
+     * Vérifie si le responsable légal respect les règles
+     * @param responsableLegal
+     * @return
+     */
     private boolean valideResponsableLegal(ResponsableLegal responsableLegal){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("responsable_legal")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,responsableLegal);
             }
         }
         return res;
     }
 
+    /**
+     * Vérifie si l'identité respect les règles
+     * @param identite
+     * @return
+     */
     private boolean valideIdentite(Identite identite){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("identite")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,identite);
             }
         }
@@ -155,20 +196,32 @@ public class Validateur {
     }
 
 
+    /**
+     * Vérifie si l'ancien titre respect les règles
+     * @param ancienTitre
+     * @return
+     */
     private boolean valideAncienTitre( AncienTitre ancienTitre){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("ancien_titre")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,ancienTitre);
             }
         }
         return res;
     }
 
+    /**
+     * Vérifie si la fiscalité respect les règles
+     * @param fiscalite
+     * @return
+     */
     private boolean valideFiscalite( Fiscalite fiscalite){
         boolean res = true;
         for(int i=0; i< regles.size();i++){
             if(regles.get(i).categorie.equals("fiscalite")){
+                System.out.println("Règle : " + regles.get(i).expression);
                 res = res & (Boolean) MVEL.eval(regles.get(i).expression,fiscalite);
             }
         }

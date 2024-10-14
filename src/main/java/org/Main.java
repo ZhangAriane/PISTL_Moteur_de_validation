@@ -44,6 +44,9 @@ public class Main {
 //
 //        System.out.println("\nRésultat de validation : " + res);
 
+//        for(Regle regle : regles){
+//            System.out.println(regle.categorie);
+//        }
 
         //Création de donnée
         EtatCivil etatCivil = new EtatCivil();
